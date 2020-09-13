@@ -6,7 +6,7 @@ const SessionController = require('./controllers/SessionController');
 
 const routes = express.Router();
 
-routes.post('/session', SessionController.create);
+routes.post('/sessions', SessionController.create);
 routes.get('/profile', ProfileController.index);
 
 routes.get('/ongs', OngController.index);
@@ -20,12 +20,12 @@ module.exports = routes;
 
 /**
 * Rotas/Recursos:
-* 
+*
 */
 
 /**
 * HTTP:
-* 
+*
 * GET: Retrieve data in the backend
 * POST: Create data in the backend
 * PUT: Update data in the backend
@@ -34,7 +34,7 @@ module.exports = routes;
 
 /**
 * Params Types:
-* 
+*
 * Query: Named params send in the routes after "?" (Filters)
 * Route: Param used to id resources
 * Request Body: Used to create or update resources
