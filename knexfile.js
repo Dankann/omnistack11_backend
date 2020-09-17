@@ -1,4 +1,5 @@
 // Update with your config settings.
+require('dotenv/config');
 
 module.exports = {
 
@@ -26,10 +27,11 @@ module.exports = {
 
   staging: {
     client: 'postgresql',
+    host: process.env.DB_HOST,
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database: process.env.DB_NAME,
+      user:     process.env.DB_USER,
+      password: process.env.DB_PASS
     },
     pool: {
       min: 2,
