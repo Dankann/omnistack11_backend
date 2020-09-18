@@ -4,7 +4,7 @@ const connection = require('../database/connection');
 module.exports = {
     async index(request, response) {
         const ongs = await connection('ongs').select('*');
-
+        console.log('ongs list');
         return response.json(ongs);
     },
 
